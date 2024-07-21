@@ -1,0 +1,70 @@
+
+version: 2
+
+models:
+    - name: platform_trends_2024
+      description: "A starter dbt model for change columns types"
+      columns:
+          - name: Track
+            description: "Name of the song."
+          - name: Album_Name
+            description: "Name of the album the song belongs to."
+          - name: Artist
+            description: "Name of the artist(s) of the song."
+          - name: Release_Date
+            description: "Date when the song was released."
+          - name: ISRC
+            description: "International Standard Recording Code for the song."
+            tests:
+              - unique
+              - not_null
+          - name: All_Time_Rank
+            description: "Ranking of the song based on its all-time popularity."
+          - name: Track_Score
+            description: "Score assigned to the track based on various factors."
+          - name: Spotify_Streams
+            description: "Total number of streams on Spotify."
+          - name: Spotify_Playlist_Count
+            description: "Number of Spotify playlists the song is included in."
+          - name: Spotify_Playlist_Reach
+            description: "Reach of the song across Spotify playlists."
+          - name: Spotify_Popularity
+            description: "Popularity score of the song on Spotify."
+          - name: YouTube_Views
+            description: "Total views of the song's official video on YouTube."
+          - name: YouTube_Likes
+            description: "Total likes on the song's official video on YouTube."
+          - name: TikTok_Posts
+            description: "Number of TikTok posts featuring the song."
+          - name: TikTok_Likes
+            description: "Total likes on TikTok posts featuring the song."
+          - name: TikTok_Views
+            description: "Total views on TikTok posts featuring the song."
+          - name: YouTube_Playlist_Reach
+            description: "Reach of the song across YouTube playlists."
+          - name: Apple_Music_Playlist_Count
+            description: "Number of Apple Music playlists the song is included in."
+          - name: AirPlay_Spins
+            description: "Number of times the song has been played on radio stations."
+          - name: SiriusXM_Spins
+            description: "Number of times the song has been played on SiriusXM."
+          - name: Deezer_Playlist_Count
+            description: "Number of Deezer playlists the song is included in."
+          - name: Deezer_Playlist_Reach
+            description: "Reach of the song across Deezer playlists."
+          - name: Amazon_Playlist_Count
+            description: "Number of Amazon Music playlists the song is included in."
+          - name: Pandora_Streams
+            description: "Total number of streams on Pandora."
+          - name: Pandora_Track_Stations
+            description: "Number of Pandora stations featuring the song."
+          - name: Soundcloud_Streams
+            description: "Total number of streams on Soundcloud."
+          - name: Shazam_Counts
+            description: "Total number of times the song has been Shazamed."
+          - name: TIDAL_Popularity
+            description: "Popularity score of the song on TIDAL."
+          - name: Explicit_Track
+            description: "Indicates whether the song contains explicit content."
+          - name: last_update
+            description: "Timestamp of the last update."

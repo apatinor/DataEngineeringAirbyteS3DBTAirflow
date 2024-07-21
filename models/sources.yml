@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: public
+    tables:
+      - name: s3_spotify_spotify_trends_2024
+        description: "La tabla fuente de tendencias de Spotify 2024."
