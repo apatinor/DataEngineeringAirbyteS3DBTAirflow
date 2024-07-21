@@ -43,7 +43,7 @@ with
             nullif(replace("Shazam_Counts", ',', ''), '')::bigint as shazam_counts,
             nullif(replace("TIDAL_Popularity", ',', ''), '')::int as tidal_popularity,
             "Explicit_Track"::boolean as explicit_track,
-            now() as last_update
+            now()::timestamp as last_update
         from "postgresdb_4izx"."public"."s3_spotify_spotify_trends_2024"
     )
 
